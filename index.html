@@ -2,11 +2,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Ajaxbar project</title>
+    <title>AjaxLoader project</title>
     <link href="css/main.css" rel="stylesheet" />
-    <script src="js/ajaxbar.js"></script>
+    <script src="js/ajaxloader.js"></script>
 </head>
 <body>
-    <h1>AJAX bar project</h1>
+    <h1>AjaxLoader Project</h1>
+    <canvas id="spinner"></canvas>
+    <button id="btnShow">Show</button>
+    <button id="btnHide">Hide</button>
+    
+    <script type="text/javascript">
+        var opts = {
+            size: 48,           // Width and height of the spinner
+            factor: 0.3,        // Factor of thickness, density, etc.
+            color: '#009cf7',   // Color #rgb or #rrggbb
+            speed: 1,           // Rounds per second
+            clockwise: true     // Direction of rotation
+        };
+        var ajaxLoader = new AjaxLoader('spinner', opts);
+        ajaxLoader.hide();
+        btnShow.onclick = function () {
+            ajaxLoader.show();
+        };
+        btnHide.onclick = function () {
+            ajaxLoader.hide();
+        };
+    </script>
 </body>
 </html>
