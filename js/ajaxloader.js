@@ -1,9 +1,7 @@
-﻿/// <reference path="../index.html" />
-
-// Constructor
+﻿// Constructor
 function AjaxLoader(id, options) {
-    // Convert color hex to rgb
-    function getRGB(hex) {
+    // Convert color Hex to RGB
+    function HexToRGB(hex) {
         var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
         hex = hex.replace(shorthandRegex, function (m, r, g, b) {
             return r + r + g + g + b + b;
@@ -16,36 +14,46 @@ function AjaxLoader(id, options) {
         } : null;
     }
 
+    // Convert color RGB to Hex
+    function RGBToHex(r, g, b) {
+        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+
+    // Default options use when constructor's options are ommited
     var defaultOptions = {
         size: 32,       // Width and height of the spinner
         factor: 0.25,   // Factor of thickness, density, etc.
-        color: '#000',  // Color #rgb or #rrggbb
         speed: 1,       // Rounds per second
-        fps: 20,        // Frames per second to draw
+        color: '#000',  // Color #rgb or #rrggbb
         clockwise: true // Direction of rotation
     }
 
     var size = options.size || defaultOptions.size,
         factor = options.factor || defaultOptions.factor,
-        color = getRGB(options.color || defaultOptions.color),
+        color = HexToRGB(options.color || defaultOptions.color),
         speed = options.speed || defaultOptions.speed,
-        fps = options.fps || defaultOptions.fps,
         clockwise = options.clockwise || defaultOptions.clockwise,
         canvas = document.getElementById(id),
-        timer, rate = 0.0, deltaRate,
-        segments = (size >= 32) ? ((size >= 256) ? 72 : 36) : 18,
-        thickness = 0.5 * size * factor,
-        deltaAngle = 2.0 * Math.PI / segments;
-    if (clockwise) { deltaRate = -speed / fps; }
-    else { deltaRate = speed / fps; }
+        timer, rate = 0.0, deltaRate, segments, thickness, deltaAngle,
+        fps = 30        // frames per second;
 
     if (canvas == null) {
         console.log('AjaxLoader Error! Cannot find canvas element by id "' + id + '"');
         return null;
     }
-    canvas.width = size;
-    canvas.height = size;
     var context = canvas.getContext("2d");
+    Init();
+
+    // Init all viriables
+    function Init() {
+        segments = (size >= 32) ? ((size >= 128) ? 72 : 36) : 18,
+        thickness = 0.5 * size * factor,
+        deltaAngle = 2.0 * Math.PI / segments;
+        if (clockwise) { deltaRate = -speed / fps; }
+        else { deltaRate = speed / fps; }
+        canvas.width = size;
+        canvas.height = size;
+    }
 
     // Draw ajaxloader
     function Draw(rate) {
@@ -95,5 +103,49 @@ function AjaxLoader(id, options) {
     this.hide = function () {
         clearInterval(timer);
         canvas.style.display = 'none';
+    }
+
+    this.getSize = function () {
+        return size;
+    }
+
+    this.setSize = function (value) {
+        size = value;
+        Init();
+    }
+
+    this.getFactor = function () {
+        return factor;
+    }
+
+    this.setFactor = function (value) {
+        factor = value;
+        Init();
+    }
+
+    this.getSpeed = function () {
+        return speed;
+    }
+
+    this.setSpeed = function (value) {
+        speed = value;
+        Init();
+    }
+
+    this.getColor = function () {
+        return RGBToHex(color.r, color.g, color.b);
+    }
+
+    this.setColor = function (value) {
+        color = HexToRGB(value);
+    }
+
+    this.getClockwise = function () {
+        return clockwise;
+    }
+
+    this.setClockwise = function (value) {
+        clockwise = value;
+        Init();
     }
 }

@@ -1,33 +1,107 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>AjaxLoader project</title>
+    <title>AjaxLoader.js - Simple Java Script Spinner</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="ajax loader, ajaxloader, loading indicator, ajax load, ajaxload, ajax spinner, preloader" />
+    <meta name="description" content="Simple Java Script ajaxloader indicator" />
+    <meta name="author" content="musicvano" />
+    <meta name="google-site-verification" content="SJ5XNZ3-FVhc-JnUew4mbni2VdXZAZLnjyXnlJ4PpRI" />
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png" />
+    <link href='http://fonts.googleapis.com/css?family=Merienda:400,700' rel='stylesheet' type='text/css' />
+    <link href="css/custom-theme/jquery-ui-1.10.2.custom.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.2.custom.min.js"></script>
     <link href="css/main.css" rel="stylesheet" />
-    <script src="js/ajaxloader.js"></script>
+    <script src="jscolor/jscolor.js"></script>
+    <script src="js/ajaxloader.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-    <h1>AjaxLoader Project</h1>
-    <canvas id="spinner"></canvas>
-    <button id="btnShow">Show</button>
-    <button id="btnHide">Hide</button>
-    
-    <script type="text/javascript">
-        var opts = {
-            size: 48,           // Width and height of the spinner
-            factor: 0.3,        // Factor of thickness, density, etc.
-            color: '#009cf7',   // Color #rgb or #rrggbb
-            speed: 1,           // Rounds per second
-            clockwise: true     // Direction of rotation
-        };
-        var ajaxLoader = new AjaxLoader('spinner', opts);
-        ajaxLoader.hide();
-        btnShow.onclick = function () {
-            ajaxLoader.show();
-        };
-        btnHide.onclick = function () {
-            ajaxLoader.hide();
-        };
-    </script>
+    <header>
+        <div class="logo">
+            <h1>AjaxLoader.js</h1>
+            <p>Simple Java Script spinner</p>
+        </div>
+        <nav>
+            <a href="#api" title="API">API</a>
+            <a href="download/ajaxloader.zip" title="Download AjaxLoader">Download</a>
+            <a href="https://github.com/musicvano/ajaxloader" title="Fork me on GitHub">GitHub</a>
+            <a href="#contacts" title="Contacts">Contacts</a>
+        </nav>
+    </header>
+    <article>
+        <h2>Demo</h2>
+        <div id="container">
+            <div>
+                <canvas id="spinner"></canvas>
+            </div>
+        </div>
+        <div id="options">
+            Size: <span id="size">64</span>
+            <div class="slider" id="slider-size"></div>
+            Factor: <span id="factor">0.25</span>
+            <div class="slider" id="slider-factor"></div>
+            Speed: <span id="speed">1.0</span>
+            <div class="slider" id="slider-speed"></div>
+            <label for="color">Color:</label>
+            <input class="color {hash:true}" id="color" value="#4080FF" maxlength="7" />
+        </div>
+        <h2>About</h2>
+        <p>
+            AjaxLoader library allows to create spinning activity indicators dynamically.
+            It can be used instead of GIF image ajaxloaders. The main features of this library are the following:
+        </p>
+        <ul>
+            <li>Easy to use</li>
+            <li>No external images, dependencies or CSS files</li>
+            <li>Very small size (only 1.7 kB)</li>
+            <li>Resolution independent</li>
+            <li>Cross-browser</li>
+            <li>Free to use</li>
+        </ul>
+        <h2>How to use</h2>
+        <h2><a class="anchor" id="api">API</a></h2>
+        <h2>Supported browsers</h2>
+        <p>AjaxLoader supports the following browsers:</p>
+        <ul>
+            <li>Chrome 26.0+</li>
+            <li>Firefox 20.0+</li>
+            <li>Internet Explorer 10+</li>
+            <li>Opera 12.15+</li>
+            <li>Safari 6.0+</li>
+        </ul>
+        <h2>Release History</h2>
+        <p>Version 0.1 (14.04.2013)</p>
+        <ul>
+            <li>Initial release</li>
+        </ul>
+        <h2><a class="anchor" id="contacts">Contacts</a></h2>
+        If you find any bugs or have some suggestions, please use the GitHub
+        <a href="https://github.com/musicvano/ajaxloader/issues">issue tracker</a>.
+        <br />
+        If you have any questions write me to <a href="mailto:musicvano@mail.ru">musicvano@mail.ru</a>
+        <br />
+        Follow me to <a href="https://github.com/musicvano">GitHub</a>.
+        <h2>License</h2>
+        <p>Copyright (c) 2013 by Muzyka Ivan</p>
+        <p>
+            Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+            files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
+            modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+            the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission 
+            notice shall be included in all copies or substantial portions of the Software.
+        </p>
+        <p>
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+            WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+            COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+            ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        </p>
+    </article>
+    <footer>
+        <p class="center">Copyright © 2013 by Muzyka Ivan</p>
+    </footer>
 </body>
 </html>
