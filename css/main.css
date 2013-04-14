@@ -2,13 +2,22 @@
     font-family: 'Merienda', cursive, sans-serif;
     width: 800px;
     margin: auto;
-    background: -o-linear-gradient(top, #d6d6d6 0px, #ffffff 10%, #ffffff 95%, #d6d6d6 100%);
-    background: -webkit-linear-gradient(top, #d6d6d6 0px, #ffffff 10%, #ffffff 95%, #d6d6d6 100%);
-    background: -moz-linear-gradient(top, #d6d6d6 0px, #ffffff 10%, #ffffff 95%, #d6d6d6 100%);
-    background: -ms-linear-gradient(top, #d6d6d6 0px, #ffffff 10%, #ffffff 95%, #d6d6d6 100%);
-    background: linear-gradient(top, #d6d6d6 0px, #ffffff 10%, #ffffff 95%, #d6d6d6 100%);
+    background: -o-linear-gradient(top, #d6d6d6 0px, #ffffff 5%, #ffffff 98%, #d6d6d6 100%);
+    background: -webkit-linear-gradient(top, #d6d6d6 0px, #ffffff 5%, #ffffff 98%, #d6d6d6 100%);
+    background: -moz-linear-gradient(top, #d6d6d6 0px, #ffffff 5%, #ffffff 98%, #d6d6d6 100%);
+    background: -ms-linear-gradient(top, #d6d6d6 0px, #ffffff 5%, #ffffff 98%, #d6d6d6 100%);
+    background: linear-gradient(top, #d6d6d6 0px, #ffffff 5%, #ffffff 98%, #d6d6d6 100%);
     color: #4d4d4d;
     text-align: justify; 
+}
+
+    body ul {
+        text-align: left;
+    }
+
+code {
+    font: 1.1em 'Inconsolata', sans-serif;
+
 }
 
 a, a:visited {
@@ -86,7 +95,6 @@ footer {
     #options input {
         font-family: 'Merienda', cursive, sans-serif;
         font-size: 1em;
-        height: 1.2em;
         border-radius: 3px;
         border: 1px solid #808080;
         width: 80px;
@@ -102,10 +110,6 @@ footer {
     margin: 20px 0px;
 }
 
-label input {
-    font-family: 'Merienda', cursive, sans-serif;
-    font-size: 1em;
-    height: 1.2em;
-    border-radius: 3px;
-    border: 1px solid #808080;
+.description {
+    padding-left: 40px;
 }

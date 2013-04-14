@@ -1,7 +1,4 @@
-﻿/// <reference path="jquery-1.9.1.js" />
-/// <reference path="ajaxloader.js" />
-
-$(function () {
+﻿$(function () {
     $('#slider-size').slider({
         min: 8,
         max: 256,
@@ -36,12 +33,13 @@ $(function () {
         ajaxLoader.setColor(event.target.value);
     });
     var opts = {
-        size: 64,           // Width and height of the spinner
-        factor: 0.25,       // Factor of thickness, density, etc.
-        color: '#4080FF',   // Color #rgb or #rrggbb
-        speed: 1,           // Rounds per second
-        clockwise: true     // Direction of rotation
+        size: 64,           
+        factor: 0.25,       
+        color: '#4080FF',   
+        speed: 1,           
+        clockwise: false     
     };
     var ajaxLoader = new AjaxLoader('spinner', opts);
     ajaxLoader.show();
+    sh_highlightDocument();
 });

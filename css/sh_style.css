@@ -1,0 +1,199 @@
+pre.sh_sourceCode {
+    font: 1em 'Inconsolata', sans-serif;
+    color: #4d4d4d;
+    background-color: #f5f5f5;
+    font-style: normal;
+    font-weight: normal;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px 5px;
+}
+
+    pre.sh_sourceCode .sh_keyword {
+        color: #2e7fff;
+        font-weight: bold;
+    }
+
+    /* language keywords */
+    pre.sh_sourceCode .sh_type {
+        color: darkgreen;
+    }
+
+    /* basic types */
+    pre.sh_sourceCode .sh_usertype {
+        color: teal;
+    }
+
+    /* user defined types */
+    pre.sh_sourceCode .sh_string {
+        color: #ff6161;
+    }
+
+    /* strings and chars */
+    pre.sh_sourceCode .sh_regexp {
+        color: orange;
+    }
+
+    /* regular expressions */
+    pre.sh_sourceCode .sh_specialchar {
+        color: pink;
+    }
+
+    /* e.g., \n, \t, \\ */
+    pre.sh_sourceCode .sh_comment {
+        color: #7a7a7a;
+        font-style: italic;
+    }
+
+    /* comments */
+    pre.sh_sourceCode .sh_number {
+        color: purple;
+    }
+
+    /* literal numbers */
+    pre.sh_sourceCode .sh_preproc {
+        color: darkblue;
+        font-weight: bold;
+    }
+    /* e.g., #include, import */
+    pre.sh_sourceCode .sh_symbol {
+        color: darkred;
+    }
+    /* e.g., <, >, + */
+    pre.sh_sourceCode .sh_function {
+        color: #4d4d4d;
+        font-weight: bold;
+    }
+    /* function calls and declarations */
+    pre.sh_sourceCode .sh_cbracket {
+        color: red;
+    }
+    /* block brackets (e.g., {, }) */
+    pre.sh_sourceCode .sh_todo {
+        font-weight: bold;
+        background-color: cyan;
+    }
+    /* TODO and FIXME */
+
+    /* Predefined variables and functions (for instance glsl) */
+    pre.sh_sourceCode .sh_predef_var {
+        color: darkblue;
+    }
+
+    pre.sh_sourceCode .sh_predef_func {
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    /* for OOP */
+    pre.sh_sourceCode .sh_classname {
+        color: teal;
+    }
+
+    /* line numbers (not yet implemented) */
+    pre.sh_sourceCode .sh_linenum {
+        color: #4d4d4d;
+    }
+
+    /* Internet related */
+    pre.sh_sourceCode .sh_url {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    /* for ChangeLog and Log files */
+    pre.sh_sourceCode .sh_date {
+        color: blue;
+        font-weight: bold;
+    }
+
+    pre.sh_sourceCode .sh_time, pre.sh_sourceCode .sh_file {
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    pre.sh_sourceCode .sh_ip, pre.sh_sourceCode .sh_name {
+        color: darkgreen;
+    }
+
+    /* for Prolog, Perl... */
+    pre.sh_sourceCode .sh_variable {
+        color: darkgreen;
+    }
+
+    /* for LaTeX */
+    pre.sh_sourceCode .sh_italics {
+        color: darkgreen;
+        font-style: italic;
+    }
+
+    pre.sh_sourceCode .sh_bold {
+        color: darkgreen;
+        font-weight: bold;
+    }
+
+    pre.sh_sourceCode .sh_underline {
+        color: darkgreen;
+        text-decoration: underline;
+    }
+
+    pre.sh_sourceCode .sh_fixed {
+        color: green;
+    }
+
+    pre.sh_sourceCode .sh_argument {
+        color: darkgreen;
+    }
+
+    pre.sh_sourceCode .sh_optionalargument {
+        color: purple;
+    }
+
+    pre.sh_sourceCode .sh_math {
+        color: orange;
+    }
+
+    pre.sh_sourceCode .sh_bibtex {
+        color: blue;
+    }
+
+    /* for diffs */
+    pre.sh_sourceCode .sh_oldfile {
+        color: orange;
+    }
+
+    pre.sh_sourceCode .sh_newfile {
+        color: darkgreen;
+    }
+
+    pre.sh_sourceCode .sh_difflines {
+        color: blue;
+    }
+
+    /* for css */
+    pre.sh_sourceCode .sh_selector {
+        color: purple;
+    }
+
+    pre.sh_sourceCode .sh_property {
+        color: blue;
+    }
+
+    pre.sh_sourceCode .sh_value {
+        color: darkgreen;
+        font-style: italic;
+    }
+
+    /* other */
+    pre.sh_sourceCode .sh_section {
+        color: black;
+        font-weight: bold;
+    }
+
+    pre.sh_sourceCode .sh_paren {
+        color: red;
+    }
+
+    pre.sh_sourceCode .sh_attribute {
+        color: darkgreen;
+    }

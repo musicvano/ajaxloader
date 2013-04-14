@@ -10,12 +10,17 @@
     <meta name="author" content="musicvano" />
     <link href="images/favicon.png" rel="shortcut icon" type="image/png" />
     <link href='http://fonts.googleapis.com/css?family=Merienda:400,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css' />
     <link href="css/custom-theme/jquery-ui-1.10.2.custom.css" rel="stylesheet" />
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery-ui-1.10.2.custom.min.js"></script>
     <link href="css/main.css" rel="stylesheet" />
+    <link href="css/sh_style.css" rel="stylesheet" />
     <script src="jscolor/jscolor.js"></script>
     <script src="js/ajaxloader.min.js"></script>
+    <script src="js/sh_main.min.js"></script>
+    <script src="js/sh_html.min.js"></script>
+    <script src="js/sh_javascript.min.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -66,20 +71,124 @@
         <ul>
             <li>Easy to use</li>
             <li>No external images, dependencies or CSS files</li>
-            <li>Very small size (only 1.7 kB)</li>
+            <li>Very small size (only 1.8 kB)</li>
             <li>Resolution independent</li>
             <li>Cross-browser</li>
             <li>Free to use</li>
         </ul>
         <h2>How to use</h2>
+        <p>AjaxLoader.js can be added to your site in three simple steps:</p>
+        <ol>
+            <li>Include <code>ajaxloader.js</code> (or the minified version <code>ajaxloader.min.js</code> for production) in your page.
+                For example:
+                <pre class="sh_html">&lt;script src="../ajaxloader.js"&gt;&lt;/script&gt;</pre>
+            </li>
+            <li>Add to your page <code>canvas</code> object and set <code>id</code>.
+                <pre class="sh_html">&lt;canvas id="spinner"&gt;&lt;/canvas&gt;</pre>
+            </li>
+            <li>Create <code>AjaxLoader</code> object and call function <code>show()</code>:
+                <pre class="sh_javascript">var ajaxLoader = new AjaxLoader("spinner");<br />ajaxLoader.show();</pre>
+                You can specify options of the spinner before it's creation. For example:
+                <pre class="sh_javascript">
+var opts = {
+    size: 32,           // Width and height of the spinner
+    factor: 0.25,       // Factor of thickness, density, etc.
+    color: "#000",      // Color #rgb or #rrggbb
+    speed: 1,           // Number of turns per second
+    clockwise: true     // Direction of rotation
+};
+var ajaxLoader = new AjaxLoader("spinner", opts);
+ajaxLoader.show();
+                </pre>
+            </li>
+        </ol>
         <h2><a class="anchor" id="api">API</a></h2>
+        <code><b>&lt;Object&gt; AjaxLoader(id, [options])</b></code>
+        <div class="description">
+            <p>Constructor returns <code>AjaxLoader</code> object.</p>
+            Parameters:
+            <ul>
+                <li><code>id &lt;String&gt;</code> The id of the canvas tag.</li>
+                <li><code>[options] &lt;Object&gt;</code> Optional parameters of the spinner.  
+                    Options object may contain some of these fields: 
+                    <ul>
+                        <li><code>size &lt;Number&gt;</code> Width and height of the spinner in pixels. The default value is 32.</li>
+                        <li><code>factor &lt;Number&gt;</code> Factor of thickness, density. The default value is 0.25.</li>
+                        <li><code>color &lt;String&gt;</code> Color #rgb or #rrggbb. The default value is black "#000".</li>
+                        <li><code>speed &lt;Number&gt;</code> Number of turns per second. The default value is 1.0.</li>
+                        <li><code>clockwise &lt;Boolean&gt;</code> Direction of rotation. The default value is <code>true</code>.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Examples:</p>
+            <pre class="sh_javascript">var ajaxLoader = new AjaxLoader("spinner");</pre>
+            <pre class="sh_javascript">var ajaxLoader = new AjaxLoader("spinner", { color: "#FF00FF" });</pre>
+        </div>
+        <code><b>&lt;void&gt; show()</b></code>
+        <div class="description">
+            <p>Show the spinner and begin animation. Note: keyword <code>void</code> uses instead of <code>undefined</code>.</p>
+        </div>
+        <code><b>&lt;void&gt; hide()</b></code>
+        <div class="description">
+            <p>Stop animation and hide the spinner. The element still remains in the DOM and you can show spinner again.</p>
+        </div>
+        <code><b>&lt;Number&gt; getSize()</b></code>
+        <div class="description">
+            <p>Returns the size of the loader. The default value is 32.</p>
+        </div>
+        <code><b>&lt;Number&gt; getFactor()</b></code>
+        <div class="description">
+            <p>Returns the thickness of the loader. The default value is 0.25.</p>
+        </div>
+        <code><b>&lt;Number&gt; getSpeed()</b></code>
+        <div class="description">
+            <p>Returns the number of turns per second. The default value is 1.0.</p>
+        </div>
+        <code><b>&lt;String&gt; getColor()</b></code>
+        <div class="description">
+            <p>Returns hexadecimal color of the loader. The default value is <code>"#000"</code> (black).</p>
+        </div>
+        <code><b>&lt;String&gt; getClockwise()</b></code>
+        <div class="description">
+            <p>Returns direction of the rotation. The default value is <code>true</code>.</p>
+        </div>
+        <code><b>&lt;void&gt; setSize(value)</b></code>
+        <div class="description">
+            <p>Sets the size of the loader.</p>
+            Parameters:
+            <ul><li><code>value &lt;Number&gt;</code> New size in pixels.</li></ul>
+        </div>
+        <code><b>&lt;void&gt; setFactor(value)</b></code>
+        <div class="description">
+            <p>Sets the thickness of the loader.</p>
+            Parameters:
+            <ul><li><code>value &lt;Number&gt;</code> New thickness in the range 0..1.</li></ul>
+        </div>
+        <code><b>&lt;void&gt; setSpeed(value)</b></code>
+        <div class="description">
+            <p>Sets turns count of the loader per second. Recommended to set the value in the range 0..3.0</p>
+            Parameters:
+            <ul><li><code>value &lt;Number&gt;</code> New speed.</li></ul>
+        </div>
+        <code><b>&lt;void&gt; setColor(value)</b></code>
+        <div class="description">
+            <p>Sets hexadecimal color of the loader.</p>
+            Parameters:
+            <ul><li><code>value &lt;String&gt;</code> New color in format <code>"#rgb"</code> or <code>"#rrggbb"</code>.</li></ul>
+        </div>
+        <code><b>&lt;void&gt; setClockwise(value)</b></code>
+        <div class="description">
+            <p>Sets direction of the rotation of your loader.</p>
+            Parameters:
+            <ul><li><code>value &lt;Boolean&gt;</code> New direction of the rotation.</li></ul>
+        </div>        
         <h2>Supported browsers</h2>
         <p>AjaxLoader supports the following browsers:</p>
         <ul>
             <li>Chrome 26.0+</li>
             <li>Firefox 20.0+</li>
             <li>Internet Explorer 10+</li>
-            <li>Opera 12.15+</li>
+            <li>Opera 12.0+</li>
             <li>Safari 6.0+</li>
         </ul>
         <h2>Release History</h2>
