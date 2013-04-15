@@ -2,32 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>AjaxLoader project</title>
+    <title>AjaxLoader.js - Simple JavaScript Spinner</title>
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/ajaxloader.js"></script>
 </head>
 <body>
-    <h1>AjaxLoader Project</h1>
+    <h1>AjaxLoader Demo</h1>
     <canvas id="spinner"></canvas>
-    <button id="btnShow">Show</button>
-    <button id="btnHide">Hide</button>
-    
     <script type="text/javascript">
         var opts = {
-            size: 48,           // Width and height of the spinner
-            factor: 0.3,        // Factor of thickness, density, etc.
-            color: '#009cf7',   // Color #rgb or #rrggbb
+            size: 64,           // Width and height of the spinner
+            factor: 0.25,       // Factor of thickness, density, etc.
+            color: "#009cf7",   // Color #rgb or #rrggbb
             speed: 1,           // Rounds per second
             clockwise: true     // Direction of rotation
         };
-        var ajaxLoader = new AjaxLoader('spinner', opts);
-        ajaxLoader.hide();
-        btnShow.onclick = function () {
-            ajaxLoader.show();
-        };
-        btnHide.onclick = function () {
-            ajaxLoader.hide();
-        };
+        var ajaxLoader = new AjaxLoader("spinner", opts);
+        ajaxLoader.show();
     </script>
+    <hr />
+    <footer>
+        For interective demo and full API documentation refer to <a href="http://musicvano.github.io/ajaxloader">AjaxLoader.js</a> home page.
+    </footer>
 </body>
 </html>
