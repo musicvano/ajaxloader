@@ -44,18 +44,18 @@ header {
 }    
 
 .logo {
-    width: 350px;
+    width: 300px;
     float: left;
 }
 
 nav {
     float: right;
-    width: 450px;
+    width: 500px;
     padding: 50px 0px;
 }
 
     nav a {
-        margin: 0px 20px; 
+        margin: 0px 15px; 
     }
 
 footer {

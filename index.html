@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>AjaxLoader.js - Simple Java Script Spinner</title>
+    <title>AjaxLoader.js - Simple JavaScript Spinner</title>
     <meta name="google-site-verification" content="9in83e4SI1KF4B995Kt9YXPWBF_BAXyLlYpnRHyZ018" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -37,11 +37,12 @@
     <header>
         <div class="logo">
             <h1>AjaxLoader.js</h1>
-            <p>Simple Java Script spinner</p>
+            <p>Simple JavaScript spinner</p>
         </div>
         <nav>
             <a href="#api" title="API">API</a>
             <a href="download/ajaxloader.zip" title="Download AjaxLoader">Download</a>
+            <a href="#discussion" title="Leave a comment">Discussion</a>
             <a href="https://github.com/musicvano/ajaxloader" title="Fork me on GitHub">GitHub</a>
             <a href="#contacts" title="Contacts">Contacts</a>
         </nav>
@@ -156,32 +157,42 @@ ajaxLoader.show();
         <div class="description">
             <p>Sets the size of the loader.</p>
             Parameters:
-            <ul><li><code>value &lt;Number&gt;</code> New size in pixels.</li></ul>
+            <ul>
+                <li><code>value &lt;Number&gt;</code> New size in pixels.</li>
+            </ul>
         </div>
         <code><b>&lt;void&gt; setFactor(value)</b></code>
         <div class="description">
             <p>Sets the thickness of the loader.</p>
             Parameters:
-            <ul><li><code>value &lt;Number&gt;</code> New thickness in the range 0..1.</li></ul>
+            <ul>
+                <li><code>value &lt;Number&gt;</code> New thickness in the range 0..1.</li>
+            </ul>
         </div>
         <code><b>&lt;void&gt; setSpeed(value)</b></code>
         <div class="description">
             <p>Sets turns count of the loader per second. Recommended to set the value in the range 0..3.0</p>
             Parameters:
-            <ul><li><code>value &lt;Number&gt;</code> New speed.</li></ul>
+            <ul>
+                <li><code>value &lt;Number&gt;</code> New speed.</li>
+            </ul>
         </div>
         <code><b>&lt;void&gt; setColor(value)</b></code>
         <div class="description">
             <p>Sets hexadecimal color of the loader.</p>
             Parameters:
-            <ul><li><code>value &lt;String&gt;</code> New color in format <code>"#rgb"</code> or <code>"#rrggbb"</code>.</li></ul>
+            <ul>
+                <li><code>value &lt;String&gt;</code> New color in format <code>"#rgb"</code> or <code>"#rrggbb"</code>.</li>
+            </ul>
         </div>
         <code><b>&lt;void&gt; setClockwise(value)</b></code>
         <div class="description">
             <p>Sets direction of the rotation of your loader.</p>
             Parameters:
-            <ul><li><code>value &lt;Boolean&gt;</code> New direction of the rotation.</li></ul>
-        </div>        
+            <ul>
+                <li><code>value &lt;Boolean&gt;</code> New direction of the rotation.</li>
+            </ul>
+        </div>
         <h2>Supported browsers</h2>
         <p>AjaxLoader supports the following browsers:</p>
         <ul>
@@ -200,9 +211,10 @@ ajaxLoader.show();
         If you find any bugs or have some suggestions, please use the GitHub
         <a href="https://github.com/musicvano/ajaxloader/issues">issue tracker</a>.
         <br />
-        If you have any questions write me to <a href="mailto:musicvano@mail.ru">musicvano@mail.ru</a>
-        <br />
+        You can also leave a <a href="#discussion" title="Discussion">comment</a>.
         Follow me to <a href="https://github.com/musicvano">GitHub</a>.
+        <br />
+        If you have any questions write me to <a href="mailto:musicvano@mail.ru">musicvano@mail.ru</a>
         <h2>License</h2>
         <p>Copyright (c) 2013 by Ivan Muzyka</p>
         <p>
@@ -218,6 +230,21 @@ ajaxLoader.show();
             COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
             ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         </p>
+        <h2><a class="anchor" id="discussion">Discussion</a></h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'ajaxloader';
+            var disqus_identifier = 'ajaxloader';
+            var disqus_title = 'AjaxLoader.js - Simple JavaScript Spinner';
+            var disqus_url = 'http://musicvano.github.io/ajaxloader';
+            (function () {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </article>
     <footer>
         <p class="center">Copyright © 2013 by Ivan Muzyka</p>

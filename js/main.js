@@ -37,7 +37,7 @@
         factor: 0.25,       
         color: '#4080FF',   
         speed: 1,           
-        clockwise: false     
+        clockwise: true     
     };
     var ajaxLoader = new AjaxLoader('spinner', opts);
     ajaxLoader.show();
