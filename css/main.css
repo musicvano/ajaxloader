@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: 'Merienda', cursive, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     width: 800px;
     margin: auto;
     background: -o-linear-gradient(top, #d6d6d6 0px, #ffffff 5%, #ffffff 98%, #d6d6d6 100%);
@@ -8,7 +8,7 @@
     background: -ms-linear-gradient(top, #d6d6d6 0px, #ffffff 5%, #ffffff 98%, #d6d6d6 100%);
     background: linear-gradient(top, #d6d6d6 0px, #ffffff 5%, #ffffff 98%, #d6d6d6 100%);
     color: #4d4d4d;
-    text-align: justify; 
+    text-align: justify;
 }
 
     body ul {
@@ -17,7 +17,6 @@
 
 code {
     font: 1.1em 'Inconsolata', sans-serif;
-
 }
 
 a, a:visited {
@@ -35,13 +34,14 @@ a, a:visited {
     }
 
 h1 {
+    font-family: 'Merienda', cursive, sans-serif;
     font-size: 2.5em;
     text-shadow: 1px 1px #fff;
 }
 
 header {
     height: 140px;
-}    
+}
 
 .logo {
     width: 300px;
@@ -55,16 +55,9 @@ nav {
 }
 
     nav a {
-        margin: 0px 15px; 
+        margin: 0px 15px;
+        font-weight: bold;
     }
-
-footer {
-    border-style: double none none none;
-    border-width: 3px;
-    border-color: #808080;
-    font-size: 0.8em;
-    padding: 20px;
-}
 
 .center {
     text-align: center;
@@ -93,7 +86,7 @@ footer {
 }
 
     #options input {
-        font-family: 'Merienda', cursive, sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 1em;
         border-radius: 3px;
         border: 1px solid #808080;
@@ -112,4 +105,18 @@ footer {
 
 .description {
     padding-left: 40px;
+}
+
+footer {
+    border-style: double none none none;
+    border-width: 3px;
+    border-color: #808080;
+    font-size: 0.8em;
+    padding: 20px 0px;
+}
+
+#mws4926372 {
+    float: right;
+    position: relative;
+    bottom: 29px;
 }
