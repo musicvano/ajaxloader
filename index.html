@@ -65,6 +65,15 @@
             <label for="color">Color:</label>
             <input class="color {hash:true}" id="color" value="#4080FF" maxlength="7" />
         </div>
+        <div id="ad">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- AjaxLoaderAd -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-6908864963339316"
+                 data-ad-slot="7869312987"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
         <h2>About</h2>
         <p>
             AjaxLoader library allows to create spinning activity indicators dynamically.
@@ -81,14 +90,17 @@
         <h2>How to use</h2>
         <p>AjaxLoader.js can be added to your site in three simple steps:</p>
         <ol>
-            <li>Include <code>ajaxloader.js</code> (or the minified version <code>ajaxloader.min.js</code> for production) in your page.
+            <li>
+                Include <code>ajaxloader.js</code> (or the minified version <code>ajaxloader.min.js</code> for production) in your page.
                 For example:
                 <pre class="sh_html">&lt;script src="../ajaxloader.js"&gt;&lt;/script&gt;</pre>
             </li>
-            <li>Add to your page <code>canvas</code> object and set <code>id</code>.
+            <li>
+                Add to your page <code>canvas</code> object and set <code>id</code>.
                 <pre class="sh_html">&lt;canvas id="spinner"&gt;&lt;/canvas&gt;</pre>
             </li>
-            <li>Create <code>AjaxLoader</code> object and call function <code>show()</code>:
+            <li>
+                Create <code>AjaxLoader</code> object and call function <code>show()</code>:
                 <pre class="sh_javascript">var ajaxLoader = new AjaxLoader("spinner");<br />ajaxLoader.show();</pre>
                 You can specify options of the spinner before it's creation. For example:
                 <pre class="sh_javascript">
@@ -111,8 +123,9 @@ ajaxLoader.show();
             Parameters:
             <ul>
                 <li><code>id &lt;String&gt;</code> The id of the canvas tag.</li>
-                <li><code>[options] &lt;Object&gt;</code> Optional parameters of the spinner.  
-                    Options object may contain some of these fields: 
+                <li>
+                    <code>[options] &lt;Object&gt;</code> Optional parameters of the spinner.
+                    Options object may contain some of these fields:
                     <ul>
                         <li><code>size &lt;Number&gt;</code> Width and height of the spinner in pixels. The default value is 32.</li>
                         <li><code>factor &lt;Number&gt;</code> Factor of thickness, density. The default value is 0.25.</li>
@@ -215,19 +228,29 @@ ajaxLoader.show();
         You can also leave a <a href="#discussion" title="Discussion">comment</a>.
         Follow me to <a href="https://github.com/musicvano">GitHub</a>.
         <br />
-        If you have any questions write me to <a href="mailto:musicvano@mail.ru">musicvano@mail.ru</a>
+        If you have any questions write me to <a href="mailto:musicvano@gmail.com">musicvano@gmail.com</a>
+        <br />
+        For grateful users and those who want to support the development of this project:
+        <div id ="donate">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="4JJSTLY9YJXUL">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
         <h2>License</h2>
         <p>Copyright (c) 2013 by Ivan Muzyka</p>
         <p>
-            Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+            Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
             files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
             modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
-            the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission 
+            the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission
             notice shall be included in all copies or substantial portions of the Software.
         </p>
         <p>
-            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
-            WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+            WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
             COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
             ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         </p>
@@ -249,9 +272,6 @@ ajaxLoader.show();
     </article>
     <footer>
         <p class="center">Copyright © 2013 by Ivan Muzyka</p>
-        <a id="mws4926372" href="http://webstats.motigo.com/">
-            <img width="80" height="15" border="0" alt="Free counter and web stats" src="http://m1.webstats.motigo.com/n80x15.gif?id=AEsrpAd2eX2X2kyyj5he5zOWwCIQ" /></a>
-        <script src="http://m1.webstats.motigo.com/c.js?id=4926372&amp;lang=EN&amp;i=3" type="text/javascript"></script>
     </footer>
 </body>
 </html>

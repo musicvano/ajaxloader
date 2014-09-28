@@ -93,6 +93,12 @@ nav {
         width: 80px;
     }
 
+#ad {
+    height: 100%;
+    width: 728px;
+    margin: 20px auto 20px auto;
+}
+
 .ui-slider .ui-slider-handle {
     height: 0.9em;
     width: 0.9em;
@@ -107,16 +113,14 @@ nav {
     padding-left: 40px;
 }
 
+#donate {
+    margin: 20px 10px;
+}
+
 footer {
     border-style: double none none none;
     border-width: 3px;
     border-color: #808080;
     font-size: 0.8em;
     padding: 20px 0px;
-}
-
-#mws4926372 {
-    float: right;
-    position: relative;
-    bottom: 29px;
 }
