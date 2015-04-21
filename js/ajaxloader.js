@@ -79,12 +79,9 @@ function AjaxLoader(id, options) {
             y1 = y0 + thickness * sinA;
         context.clearRect(0, 0, size, size);
         for (var i = 0; i < segments; i++) {
-            context.beginPath();
-            if (clockwise) {
-                context.fillStyle = "rgba(" + color.r + "," + color.g + "," + color.b + "," + (segments - 1 - i) / (segments - 1) + ")";
-            } else {
-                context.fillStyle = "rgba(" + color.r + "," + color.g + "," + color.b + "," + i / (segments - 1) + ")";
-            }
+            var opacity = clockwise ? (segments - 1 - i) / (segments - 1) : i / (segments - 1);
+            context.beginPath();            
+            context.fillStyle = "rgba(" + color.r + "," + color.g + "," + color.b + "," + opacity + ")";
             context.moveTo(x0, y0);
             context.lineTo(x1, y1);
             angle += deltaAngle,
